@@ -1,152 +1,151 @@
 * {
-  box-sizing: border-box;
+  box-sizing: border-box; /* Ensure padding/border don't increase element size */
 }
 
 body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background-color: #f2f2f2; /* soft gray */
-  color: #111;
+  margin: 0; /* Remove default browser margin */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; /* Modern UI font stack */
+  background-color: #f2f2f2; /* Light gray background */
+  color: #111; /* Dark readable text */
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  color: inherit; /* Links inherit text color */
+  text-decoration: none; /* Remove default underline */
 }
 
 header,
 footer {
-  background-color: #000;
-  color: #fff;
-  padding: 1rem 2rem;
+  background-color: #000; /* Black header/footer */
+  color: #fff; /* White text for contrast */
+  padding: 1rem 2rem; /* Even spacing */
 }
 
 header h1 {
-  margin: 0;
-  font-size: 1.8rem;
+  margin: 0; /* Remove default margin */
+  font-size: 1.8rem; /* Large title */
 }
 
 .site-container {
-  min-height: 100vh;
+  min-height: 100vh; /* Full-page height layout */
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Header → content → footer */
 }
 
 .main-content {
-  flex: 1;
+  flex: 1; /* Push footer down when content is short */
   padding: 2rem;
 }
 
 .nav-links {
   display: flex;
-  gap: 1rem;
+  gap: 1rem; /* Space between nav items */
   margin-top: 0.5rem;
 }
 
 .nav-link {
-  font-weight: 500;
+  font-weight: 500; /* Slightly bold nav text */
 }
 
 .nav-link.active {
-  text-decoration: underline;
+  text-decoration: underline; /* Highlight active page */
 }
 
-/* PRODUCT GRID */
+/* ---- PRODUCT GRID ---- */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Responsive columns */
+  gap: 1.5rem; /* Space between cards */
 }
 
-/* PRODUCT CARD — COMPACT THEN EXPANDS ON HOVER */
+/* ---- PRODUCT CARD (collapsible on hover) ---- */
 .product-card {
   background-color: #fff;
   border-radius: 12px;
-  overflow: hidden;
-  transition: all 0.35s ease;
+  overflow: hidden; /* Prevent overflow during animation */
+  transition: all 0.35s ease; /* Smooth expansion */
   cursor: pointer;
   padding: 0;
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Shadow becomes visible on hover */
   position: relative;
-  max-height: 340px; /* compact size */
+  max-height: 340px; /* Default compact height */
 }
 
 .product-card:hover {
-  max-height: 950px; /* expands enough for any content */
-  transform: translateY(-4px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  max-height: 950px; /* Expand to reveal hidden content */
+  transform: translateY(-4px); /* Slight lift effect */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25); /* Add shadow */
 }
 
-
-/* IMAGE */
+/* ---- IMAGE ---- */
 .product-image {
   width: 100%;
   height: 220px;
-  object-fit: cover;
+  object-fit: cover; /* Crop image nicely */
 }
 
-/* TITLE */
+/* ---- TITLE ---- */
 .product-title {
   font-size: 1.15rem;
   font-weight: 600;
   margin: 0.75rem 1rem;
   text-align: center;
-  height: 40px;
+  height: 40px; /* Keep uniform card layout */
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: hidden; /* Prevent long names breaking layout */
   white-space: nowrap;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; /* Add "..." for long titles */
 }
 
-/* HIDDEN CONTENT — REVEALS ON HOVER */
+/* ---- HIDDEN CONTENT (reveals on hover) ---- */
 .product-info {
-  opacity: 0;
-  max-height: 0;
+  opacity: 0; /* Hidden by default */
+  max-height: 0; /* Collapse height */
   overflow: hidden;
   transition: all 0.35s ease;
-  padding: 0 1rem 0.75rem; /* ⬅ adds bottom padding */
+  padding: 0 1rem 0.75rem; /* Bottom padding shows after reveal */
   text-align: center;
 }
 
 .product-card:hover .product-info {
-  opacity: 1;
-  max-height: 600px;
-  margin-top: 0.5rem;
+  opacity: 1; /* Fade in */
+  max-height: 600px; /* Expand content area */
+  margin-top: 0.5rem; /* Space between title and info */
 }
 
 .product-category {
   font-size: 0.9rem;
-  color: #666;
+  color: #666; /* Muted text */
   text-align: center;
   margin-bottom: 0.5rem;
 }
 
 .product-price {
-  font-weight: 700;
+  font-weight: 700; /* Emphasize price */
   margin-top: 0.5rem;
 }
 
 .product-stock {
   font-size: 0.9rem;
-  color: #444;
+  color: #444; /* Slightly darker muted text */
 }
 
-/* BUTTONS */
+/* ---- BUTTONS ---- */
 .button {
   margin-top: 0.75rem;
   padding: 0.5rem 0.9rem;
-  border-radius: 999px;
+  border-radius: 999px; /* Fully rounded pill */
   border: none;
   cursor: pointer;
-  background: #000;
+  background: #000; /* Default black button */
   color: #fff;
   font-size: 0.9rem;
 }
 
 .button.secondary {
-  background: #444;
+  background: #444; /* Gray secondary button */
 }
 
 .page-title {
@@ -154,10 +153,10 @@ header h1 {
   margin-bottom: 1rem;
 }
 
-/* ADMIN FORM */
+/* ---- ADMIN FORM ---- */
 .admin-form {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive form */
   gap: 1rem;
   margin-bottom: 1.5rem;
   padding: 1rem;
@@ -167,7 +166,7 @@ header h1 {
 
 .admin-form label {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Label above input */
   font-size: 0.9rem;
   gap: 0.25rem;
 }
@@ -181,10 +180,10 @@ header h1 {
   font-size: 0.9rem;
 }
 
-/* ADMIN TABLE */
+/* ---- ADMIN TABLE ---- */
 .admin-table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: collapse; /* Clean table layout */
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
@@ -192,17 +191,17 @@ header h1 {
 
 .admin-table th,
 .admin-table td {
-  padding: 0.6rem 0.75rem;
-  border-bottom: 1px solid #eee;
+  padding: 0.6rem 0.75rem; /* Comfortable spacing */
+  border-bottom: 1px solid #eee; /* Row divider */
   font-size: 0.9rem;
 }
 
 .admin-table th {
-  background-color: #f7f7f7;
+  background-color: #f7f7f7; /* Light header row */
   text-align: left;
 }
 
-/* FOOTER TEXT */
+/* ---- FOOTER TEXT ---- */
 .footer-text {
   font-size: 0.85rem;
   text-align: center;
