@@ -1,0 +1,209 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f2f2f2; /* soft gray */
+  color: #111;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header,
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.site-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+.nav-link.active {
+  text-decoration: underline;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* PRODUCT CARD — COMPACT THEN EXPANDS ON HOVER */
+.product-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  position: relative;
+  max-height: 340px; /* compact size */
+}
+
+.product-card:hover {
+  max-height: 950px; /* expands enough for any content */
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* IMAGE */
+.product-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* TITLE */
+.product-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0.75rem 1rem;
+  text-align: center;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* HIDDEN CONTENT — REVEALS ON HOVER */
+.product-info {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  padding: 0 1rem 0.75rem; /* ⬅ adds bottom padding */
+  text-align: center;
+}
+
+.product-card:hover .product-info {
+  opacity: 1;
+  max-height: 600px;
+  margin-top: 0.5rem;
+}
+
+.product-category {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.product-price {
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.product-stock {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* BUTTONS */
+.button {
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: #000;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.button.secondary {
+  background: #444;
+}
+
+.page-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* ADMIN FORM */
+.admin-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.admin-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+  gap: 0.25rem;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+/* ADMIN TABLE */
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.admin-table th {
+  background-color: #f7f7f7;
+  text-align: left;
+}
+
+/* FOOTER TEXT */
+.footer-text {
+  font-size: 0.85rem;
+  text-align: center;
+}

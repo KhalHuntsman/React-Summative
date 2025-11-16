@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Player's Handbook",
+      "category": "Book",
+      "price": 49.99,
+      "description": "The essential guide for creating characters and playing D&D.",
+      "stock": 10,
+      "image": "https://m.media-amazon.com/images/I/811dDmyv-pL._AC_SX466_.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Dungeon Master's Guide",
+      "category": "Book",
+      "price": 49.99,
+      "description": "Everything a DM needs to run unforgettable adventures.",
+      "stock": 8,
+      "image": "https://m.media-amazon.com/images/I/81cw5IcoM+L._AC_SX466_.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Monster Manual",
+      "category": "Book",
+      "price": 49.99,
+      "description": "An encyclopedia of creatures for your world.",
+      "stock": 12,
+      "image": "https://m.media-amazon.com/images/I/818Bc9VG4TL._AC_SX466_.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Ruby Dice Set",
+      "category": "Dice",
+      "price": 9.99,
+      "description": "Red translucent dice set with gold inlay.",
+      "stock": 20,
+      "image": "https://m.media-amazon.com/images/I/71cgQvpbMiL._AC_SX466_.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Sapphire Dice Set",
+      "category": "Dice",
+      "price": 9.99,
+      "description": "Blue gemlike dice that sparkle in the light.",
+      "stock": 18,
+      "image": "https://m.media-amazon.com/images/I/71K21LSCsJL._AC_SX466_.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Emerald Dice Set",
+      "category": "Dice",
+      "price": 9.99,
+      "description": "Rich green dice with a magical feel.",
+      "stock": 14,
+      "image": "https://m.media-amazon.com/images/I/71fbRjJBA5L._AC_SX466_.jpg"
+    }
+  ]
+}
